@@ -1,0 +1,133 @@
+//vars
+
+
+section.main
+    +paddings(30px, 140px, 0)    
+    display: flex  
+    align-items: stretch 
+    @media (max-width: 748px)
+        flex-wrap: wrap  
+
+    .article  
+        display: flex  
+        flex-direction: column  
+        flex: 1 1 0                     
+        overflow: hidden 
+        margin-right: 20px
+        font: 12px/16px 'Tahoma' 
+        &.article:last-child
+            margin-right: 0 
+        
+        @media (max-width: 748px)
+            flex: 1 1 auto 
+            // display: block
+            padding-bottom: 10px   
+            margin-right: 0 
+
+            
+        
+    
+    .article__title
+        font: normal 14px 'Oswald' 
+        text-transform: uppercase 
+        white-space: nowrap   
+        margin-bottom: 16px           
+        &:before
+            content: ''
+            display: inline-block
+            width: 15px
+            height: 15px 
+            margin-right: 5px  
+            background-color: $hover-color 
+        &:after
+            content: '' 
+            display: inline-block    
+            width: 100%     
+            height: 15px     
+            margin-left: 7px         
+            background-image: url(../src/sass/blocks/main/images/border.png)
+            background-repeat: repeat-x  
+    
+    .article__content
+        display: flex  
+        @media (max-width: 748px)
+            display: block        
+
+    .article__img    
+        flex: none              
+        display: block
+        width: 136px
+        height: 136px 
+        background-color: #e2e2e2
+        border: 1px solid #ffffff
+        outline: 1px solid #c9c9c9 
+        margin: 0px 15px 2px 2px
+        @media (max-width: 748px)
+            float: left    
+            // &:after
+            // content: ""
+            // display: block
+            // clear: both      
+    
+    .article__inner 
+        display: flex           
+        flex-direction:  column   
+        @media (max-width: 748px)
+            display: block                  
+
+    .article__text, .article__text>i 
+        text-align: justify            
+        color: $banner-menu          
+        font: 12px/16px 'Tahoma'                  
+            
+    .article__read-more   
+        margin-top: auto 
+        font: 12px/16px 'Tahoma'                          
+        text-decoration: underline  
+        &:active   
+            color: #c9c9c9
+        &:visited
+            color: #000000 
+        
+        @media (max-width: 768px)
+            display: block 
+            margin-top: 15px 
+        
+    .article__post 
+        margin-top: auto     
+        font: 12px/16px 'Tahoma'                                
+        color: #000000 
+        
+        @media (max-width: 768px)
+            display: block         
+            margin-top: 15px 
+    
+    .person
+        margin-top: 10px  
+    .person__ava 
+        float: left 
+        display: block
+        width: 36px
+        height: 36px
+        background-color: #e2e2e2
+        border: 1px solid #ffffff
+        outline: 1px solid #c9c9c9  
+        margin: 0px 15px 2px 2px 
+    
+    .person__name
+        font: 11px/14px 'Tahoma'
+        text-transform: uppercase  
+        color: #525252        
+    .person__info
+        font: 11px/14px 'Tahoma'
+        color: $banner-menu 
+    
+    .ourclients
+        display: flex
+        justify-content: space-around 
+        flex-wrap: wrap  
+
+       
+
+
+            

@@ -1,0 +1,45 @@
+header.header
+    +paddings(25px, 140px, 0px)
+    .top
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap 
+
+        .search::after 
+            content: 'GO' 
+            display: inline   
+            color: #ffffff
+            padding: 5px 12px 8px 
+            font: 14px/40px 'Oswald',sans-serif             
+            background-color: $hover-color 
+            cursor: pointer 
+
+        .search input
+            width: 160px
+            height: 30px
+            border: 1px solid $nav-border-color 
+            border-right: 0
+            font: normal 12px 'Tahoma'
+            color: $dark-grey   
+            padding-left: 8px 
+    
+
+.logo::after 
+    content: ''
+    position: absolute 
+    display: block   
+    width: 10px
+    height: 10px            
+    background-color: $hover-color               
+
+#js-activeBar
+    position: absolute   
+    width: 0 
+    left: -999px
+    background: $hover-color
+    z-index: 1 
+    box-sizing: border-box 
+
+.js-menu__item--active
+    position: relative
+    background-color: transparent 
