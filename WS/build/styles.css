@@ -35,13 +35,13 @@ a:visited {
 
 header.header {
   padding: 25px 140px 0px; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 992px) {
     header.header {
       padding: 5px 14px 0px; } }
   header.header .top {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; }
+    flex-wrap: nowrap; }
     header.header .top .search::after {
       content: 'GO';
       display: inline;
@@ -50,6 +50,9 @@ header.header {
       font: 14px/40px 'Oswald',sans-serif;
       background-color: #29c5e6;
       cursor: pointer; }
+      @media (max-width: 768px) {
+        header.header .top .search::after {
+          display: none; } }
     header.header .top .search input {
       width: 160px;
       height: 30px;
@@ -58,26 +61,16 @@ header.header {
       font: normal 12px 'Tahoma';
       color: #b2b2b2;
       padding-left: 8px; }
-
-.logo::after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 10px;
-  height: 10px;
-  background-color: #29c5e6; }
-
-#js-activeBar {
-  position: absolute;
-  width: 0;
-  left: -999px;
-  background: #29c5e6;
-  z-index: 1;
-  box-sizing: border-box; }
-
-.js-menu__item--active {
-  position: relative;
-  background-color: transparent; }
+      @media (max-width: 768px) {
+        header.header .top .search input {
+          display: none;
+          float: left; } }
+    header.header .top .fa-search {
+      font-size: 30px;
+      color: #29c5e6; }
+      @media (min-width: 768px) {
+        header.header .top .fa-search {
+          display: none; } }
 
 .menu {
   display: flex;
@@ -86,6 +79,10 @@ header.header {
   margin-top: 30px;
   list-style-type: none;
   background-color: #f3f3f3; }
+  @media (max-width: 768px) {
+    .menu {
+      flex-direction: column;
+      display: none; } }
   .menu li {
     width: 100%;
     position: relative;
@@ -110,43 +107,29 @@ header.header {
       .menu .menu__item--active {
         background-color: #29c5e6; } }
 
-@media screen and (max-width: 767px) {
-  #js-activeBar {
-    display: none; } }
+#js-activeBar {
+  position: absolute;
+  background: #29c5e6;
+  z-index: 1;
+  box-sizing: border-box; }
+  @media screen and (max-width: 480px) {
+    #js-activeBar {
+      display: none; } }
 
 #js-menu-trigger {
-  width: 100%;
   height: 40px;
-  text-align: center;
-  margin-top: 15px;
-  background-color: #f3f3f3; }
-  #js-menu-trigger span {
-    font: normal 14px/40px 'Oswald', sans-serif;
-    color: #b2b2b2; }
-
-@media screen and (max-width: 479px) {
-  #js-adaptive-menu {
-    display: none; }
-    #js-adaptive-menu .menu__item--active {
-      background-color: #29c5e6; } }
-
-@media screen and (min-width: 480px) {
-  #js-menu-trigger {
-    display: none; }
-  #js-adaptive-menu {
-    display: flex   !important; } }
+  font-size: 30px !important;
+  color: #29c5e6; }
+  @media screen and (min-width: 768px) {
+    #js-menu-trigger {
+      display: none; } }
 
 section.banner {
-  padding: 30px 140px 0; }
-  @media only screen and (max-width: 768px) {
+  padding: 30px 140px 0;
+  overflow-x: auto; }
+  @media only screen and (max-width: 992px) {
     section.banner {
       padding: 6px 14px 0; } }
-  section.banner .banner__img {
-    width: 100%;
-    height: 280px;
-    background-color: #e2e2e2;
-    overflow: hidden;
-    z-index: 1; }
   section.banner .banner__title {
     animation: fadeInDown 1s;
     animation-name: fadeInDown;
@@ -162,32 +145,41 @@ section.banner {
     line-height: 37px;
     font-weight: 200;
     text-transform: uppercase;
-    color: #5a5a5a;
+    color: #fff;
     margin-top: 40px;
     margin-left: 40px;
     z-index: 2; }
   section.banner .banner__subtitle {
     font: 20px/38px 'Oswald', sans-serif;
     font-weight: 400;
-    color: #acacac;
+    color: #fff;
+    white-space: nowrap;
     margin-left: 40px; }
   section.banner .banner-menu {
+    display: flex;
+    height: 47px;
+    box-sizing: border-box;
     padding: 6px 8px 15px;
-    background-color: #f3f3f3; }
-    @media (max-width: 320px) {
-      section.banner .banner-menu {
-        display: flex;
-        flex-direction: column; } }
+    background-color: #f3f3f3;
+    overflow-x: auto; }
   section.banner .banner-menu li {
-    display: inline-block;
-    width: calc(100%/4); }
-  section.banner .banner-menu__item span {
+    width: calc(100%/4);
+    white-space: nowrap; }
+    @media (max-width: 768px) {
+      section.banner .banner-menu li {
+        width: 300px;
+        margin-right: 15px; } }
+  section.banner .banner-menu__item span, section.banner #js-banner-menu__item--active span {
     font: 18px/22px 'Oswald', sans-serif;
     white-space: nowrap; }
-  section.banner .banner-menu__item {
+    @media screen and (max-width: 1200px) {
+      section.banner .banner-menu__item span, section.banner #js-banner-menu__item--active span {
+        font: 12px/15px 'Oswald', sans-serif; } }
+  section.banner .banner-menu__item, section.banner #js-banner-menu__item--active {
     text-transform: uppercase;
+    cursor: pointer;
     color: #8f8f8f; }
-    section.banner .banner-menu__item:before {
+    section.banner .banner-menu__item:before, section.banner #js-banner-menu__item--active:before {
       content: '';
       position: relative;
       top: 5px;
@@ -198,25 +190,70 @@ section.banner {
       text-align: center;
       color: #fff;
       background-color: #8f8f8f; }
-      @media (max-width: 320px) {
-        section.banner .banner-menu__item:before {
-          top: 23px;
-          left: -6px; } }
-    section.banner .banner-menu__item span:first-child {
+    section.banner .banner-menu__item span:first-child, section.banner #js-banner-menu__item--active span:first-child {
       position: relative;
       color: #fff;
       padding-right: 20px;
       z-index: 3; }
-    section.banner .banner-menu__item:hover {
+      @media screen and (max-width: 1200px) {
+        section.banner .banner-menu__item span:first-child, section.banner #js-banner-menu__item--active span:first-child {
+          padding-right: 10px; } }
+    section.banner .banner-menu__item:hover, section.banner #js-banner-menu__item--active:hover {
       color: #29c5e6; }
-    section.banner .banner-menu__item:hover:before {
+    section.banner .banner-menu__item:hover:before, section.banner #js-banner-menu__item--active:hover:before {
       background-color: #29c5e6; }
+  section.banner #js-banner-menu__item--active {
+    color: #29c5e6; }
+    section.banner #js-banner-menu__item--active:before {
+      background-color: #29c5e6; }
+
+.slider {
+  width: 100%;
+  height: 280px;
+  overflow: hidden; }
+
+.slider ul {
+  list-style-type: none;
+  width: 10000px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-size: 0; }
+
+.slider li {
+  display: inline-block;
+  font-size: 0;
+  height: 280px;
+  box-sizing: border-box;
+  transition: margin-left 250ms;
+  background-size: cover; }
+  .slider li:nth-child(1) {
+    background-image: url(../src/sass/blocks/banner/images/img_05.jpg);
+    background-position: 0% 50%; }
+  .slider li:nth-child(2) {
+    background-image: url(../src/sass/blocks/banner/images/img_06.jpg);
+    background-position: 0% 100%; }
+  .slider li:nth-child(3) {
+    background-image: url(../src/sass/blocks/banner/images/img_07.jpg);
+    background-position: 0% 50%; }
+  .slider li:nth-child(4) {
+    background-image: url(../src/sass/blocks/banner/images/img_08.jpg);
+    background-position: 0% 50%; }
+
+.slider span {
+  font: 40px/40px "Open Sans", sans-serif;
+  color: red; }
+
+.slider img {
+  width: 100%;
+  height: 280px;
+  position: relative; }
 
 section.main {
   padding: 30px 140px 0;
   display: flex;
   align-items: stretch; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 992px) {
     section.main {
       padding: 6px 14px 0; } }
   @media (max-width: 748px) {
@@ -332,7 +369,7 @@ section.main {
   flex-wrap: wrap;
   margin-top: 50px;
   background-color: #7e7e7e; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 992px) {
     .footer {
       padding: 3px 14px 3px; } }
   .footer section {

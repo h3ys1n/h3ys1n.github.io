@@ -1,13 +1,7 @@
 section.banner
     +paddings(30px, 140px, 0)    
-
-    .banner__img
-        // position: absolute     
-        width: 100%
-        height: 280px
-        background-color: #e2e2e2
-        overflow: hidden   
-        z-index: 1
+    overflow-x: auto    
+    
     
     .banner__title
         animation: fadeInDown 1s 
@@ -24,7 +18,7 @@ section.banner
         line-height: 37px      
         font-weight: 200
         text-transform: uppercase 
-        color: $title-color
+        color: #fff  
         margin-top: 40px
         margin-left: 40px 
         z-index: 2
@@ -33,28 +27,48 @@ section.banner
     .banner__subtitle          
         font: 20px/38px 'Oswald', sans-serif
         font-weight: 400
-        color: $subtitle-color  
-        // white-space: nowrap     
+        color: #fff  
+        white-space: nowrap     
         margin-left: 40px     
-    .banner-menu
+    
+    .banner-menu  
+        display: flex 
+        // min-width: 700px   
+        height: 47px 
+        box-sizing: border-box 
         padding: 6px 8px 15px  
-        background-color: $grey 
+        background-color: $grey  
+        overflow-x: auto    
         
-        @media (max-width: 320px)
-            display: flex  
-            flex-direction: column   
+        // @media (max-width: $md)
+        //     display: flex  
+        //     justify-content: space-between  
+        // @media (max-width: $sm)
+        //     display: flex  
+        //     flex-direction: column             
+        
 
 
     .banner-menu li   
-        display: inline-block 
-        width: calc(100%/4)
+        // display: inline-block   
+        width: calc(100%/4)    
+        white-space: nowrap             
+        @media (max-width: $md) 
+            width: 300px 
+            margin-right: 15px       
+   
+     
 
-    .banner-menu__item span 
+    .banner-menu__item span, #js-banner-menu__item--active span   
         font: 18px/22px 'Oswald', sans-serif  
         white-space: nowrap   
+        @media screen and (max-width: $xl)
+            font: 12px/15px 'Oswald', sans-serif  
+            
 
-    .banner-menu__item  
+    .banner-menu__item, #js-banner-menu__item--active  
         text-transform: uppercase    
+        cursor: pointer 
         color: $banner-menu   
     
         &:before  
@@ -69,23 +83,32 @@ section.banner
             color: #fff     
             background-color: $banner-menu  
             
-            @media (max-width: 320px)
-                top: 23px
-                left: -6px 
-                         
+            // @media (max-width: $sm)
+            //     top: 23px
+            //     left: -6px    
+            // @media screen and (min-width: $sm) and (max-width: $xl)
+            //     top: 6px
+            //     left: 15px   
+                      
         
         & span:first-child 
             position: relative 
             color: #fff 
             padding-right: 20px 
             z-index: 3 
+            @media screen and (max-width: $xl)
+                padding-right: 10px 
+                    
         
         &:hover
             color: $hover-color  
         &:hover:before
             background-color: $hover-color 
         
-@keyframes test
+    #js-banner-menu__item--active  
+        color: $hover-color  
+        &:before   
+            background-color: $hover-color  
 
 
 

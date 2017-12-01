@@ -5,9 +5,12 @@
     margin-top: 30px 
     list-style-type: none
     background-color: $grey 
+    @media (max-width: $md)
+        flex-direction: column 
+        display: none 
 
     li
-        width: 100% 
+        width: 100%      
         position: relative 
         z-index: 1 
              
@@ -32,36 +35,57 @@
         color: #fff 
         @media screen and (max-width: 767px) 
             background-color: $hover-color 
+
+#js-activeBar
+    position: absolute     
+    background: $hover-color
+    z-index: 1 
+    box-sizing: border-box 
+    @media screen and (max-width: $sm)        
+        display: none   
         
 
-@media screen and (max-width: 767px)    
-    #js-activeBar 
-        display: none   
+// .js-menu__item--active
+//     position: relative
+//     background-color: transparent        
 
+// @media screen and (max-width: 767px)    
+//     #js-activeBar 
+//         display: none   
 
+// .fa-bars
+//     font-size: 30px !important  
+//     color: red  
 
-#js-menu-trigger    
-    width: 100%
-    height: 40px
-    text-align: center  
-    margin-top: 15px 
-    background-color: $grey 
-    span 
-        font: normal 14px/40px 'Oswald', sans-serif
-        color: $dark-grey        
+#js-menu-trigger     
+    height: 40px  
+    // margin-top: 15px  
+    font-size: 30px !important  
+    color: $hover-color 
+    // order: 0 
 
-
-@media screen and (max-width: 479px)     
-    #js-adaptive-menu
-        display: none  
-        .menu__item--active
-            background-color: $hover-color 
-
-
-@media screen and (min-width: 480px)    
-    #js-menu-trigger  
+    // span 
+    //     font: normal 14px/40px 'Oswald', sans-serif
+    //     color: $dark-grey  
+    @media screen and (min-width: $md)     
         display: none 
-    #js-adaptive-menu  
-        display: flex   !important         
+              
+// #js-adaptive-menu 
+//     display: flex
+//     @media screen and (min-width: $md)  
+//         display: none 
+
+// @media screen and (max-width: 479px)     
+//     #js-adaptive-menu
+//         display: none  
+//         .menu__item--active
+//             background-color: $hover-color  
+
+
+// @media screen and (min-width: $md)    
+//     #js-menu-trigger  
+//         display: none 
+//     #js-adaptive-menu  
+//         display: flex   !important         
                         
-           
+        

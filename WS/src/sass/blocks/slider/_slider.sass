@@ -1,0 +1,47 @@
+.slider 
+    width: 100%
+    // min-width: 700px     
+    height: 280px
+    // margin: auto
+    overflow: hidden 
+
+
+.slider ul
+    list-style-type: none
+    width: 10000px    
+    margin: 0
+    padding: 0
+    display: flex  
+    font-size: 0
+
+
+.slider li
+    display: inline-block
+    font-size: 0
+    height: 280px
+    box-sizing: border-box
+    transition: margin-left 250ms
+    background-size: cover  
+    &:nth-child(1)
+        background-image: url(../src/sass/blocks/banner/images/img_05.jpg) 
+        background-position: 0% 50% 
+    &:nth-child(2)
+        background-image: url(../src/sass/blocks/banner/images/img_06.jpg) 
+        background-position: 0% 100%         
+    &:nth-child(3)
+        background-image: url(../src/sass/blocks/banner/images/img_07.jpg) 
+        background-position: 0% 50%         
+    &:nth-child(4)
+        background-image: url(../src/sass/blocks/banner/images/img_08.jpg) 
+        background-position: 0% 50% 
+        
+
+.slider span
+    font: 40px/40px "Open Sans", sans-serif
+    color: red
+
+.slider img
+    width: 100%   
+    height: 280px
+    position: relative
+    

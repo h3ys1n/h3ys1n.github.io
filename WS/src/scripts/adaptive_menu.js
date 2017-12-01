@@ -1,5 +1,10 @@
 $(function(){
     $('#js-menu-trigger').on('click', function(){
-        $("#js-adaptive-menu").slideToggle(500)
+        $(".menu").slideToggle(500)
     });
+
+    $('#js-search-trigger').on('click', function(){
+        $("#js-search").animate({width: 'toggle'});
+    });
+   
 })

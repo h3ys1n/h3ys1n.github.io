@@ -2,8 +2,11 @@ header.header
     +paddings(25px, 140px, 0px)
     .top
         display: flex
-        justify-content: space-between
-        flex-wrap: wrap 
+        justify-content: space-between 
+        flex-wrap: nowrap 
+
+        // .logo
+        //     order: 0
 
         .search::after 
             content: 'GO' 
@@ -13,6 +16,8 @@ header.header
             font: 14px/40px 'Oswald',sans-serif             
             background-color: $hover-color 
             cursor: pointer 
+            @media (max-width: $md)
+                display: none 
 
         .search input
             width: 160px
@@ -22,24 +27,28 @@ header.header
             font: normal 12px 'Tahoma'
             color: $dark-grey   
             padding-left: 8px 
+            // order: 1
+
+            @media (max-width: $md)
+                display: none 
+                // order: 1 
+                float: left
+
+        .fa-search
+            font-size: 30px
+            color: $hover-color 
+            // order: 0
+            @media (min-width: $md)
+                display: none 
     
 
-.logo::after 
-    content: ''
-    position: absolute 
-    display: block   
-    width: 10px
-    height: 10px            
-    background-color: $hover-color               
+// .logo::after 
+//     content: ''
+//     position: absolute 
+//     display: block   
+//     width: 10px
+//     height: 10px            
+//     background-color: $hover-color    
+//     order: 0
+               
 
-#js-activeBar
-    position: absolute   
-    width: 0 
-    left: -999px
-    background: $hover-color
-    z-index: 1 
-    box-sizing: border-box 
-
-.js-menu__item--active
-    position: relative
-    background-color: transparent 
