@@ -131,15 +131,6 @@ section.banner {
     section.banner {
       padding: 6px 14px 0; } }
   section.banner .banner__title {
-    animation: fadeInDown 1s;
-    animation-name: fadeInDown;
-    animation-duration: 1s;
-    animation-timing-function: initial;
-    animation-delay: initial;
-    animation-iteration-count: initial;
-    animation-direction: initial;
-    animation-fill-mode: forwards;
-    animation-play-state: initial;
     font-family: "Oswald";
     font-size: 42px;
     line-height: 37px;
@@ -190,6 +181,10 @@ section.banner {
       text-align: center;
       color: #fff;
       background-color: #8f8f8f; }
+      @media (max-width: 1200px) {
+        section.banner .banner-menu__item:before, section.banner #js-banner-menu__item--active:before {
+          top: 6px;
+          left: 15px; } }
     section.banner .banner-menu__item span:first-child, section.banner #js-banner-menu__item--active span:first-child {
       position: relative;
       color: #fff;

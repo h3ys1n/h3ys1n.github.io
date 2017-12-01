@@ -4,15 +4,6 @@ section.banner
     
     
     .banner__title
-        animation: fadeInDown 1s 
-        animation-name: fadeInDown
-        animation-duration: 1s
-        animation-timing-function: initial
-        animation-delay: initial
-        animation-iteration-count: initial
-        animation-direction: initial
-        animation-fill-mode: forwards
-        animation-play-state: initial
         font-family: "Oswald" 
         font-size: 42px
         line-height: 37px      
@@ -32,8 +23,7 @@ section.banner
         margin-left: 40px     
     
     .banner-menu  
-        display: flex 
-        // min-width: 700px   
+        display: flex  
         height: 47px 
         box-sizing: border-box 
         padding: 6px 8px 15px  
@@ -49,8 +39,7 @@ section.banner
         
 
 
-    .banner-menu li   
-        // display: inline-block   
+    .banner-menu li      
         width: calc(100%/4)    
         white-space: nowrap             
         @media (max-width: $md) 
@@ -76,6 +65,8 @@ section.banner
             position: relative
             top: 5px
             left: 17px 
+            // top: 6px
+            // left: 15px 
             display: inline-block
             width: 24px
             height: 24px      
@@ -83,9 +74,9 @@ section.banner
             color: #fff     
             background-color: $banner-menu  
             
-            // @media (max-width: $sm)
-            //     top: 23px
-            //     left: -6px    
+            @media (max-width: $xl)
+                top: 6px
+                left: 15px    
             // @media screen and (min-width: $sm) and (max-width: $xl)
             //     top: 6px
             //     left: 15px   
