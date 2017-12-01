@@ -12,9 +12,15 @@
 <body>
     <header class="header">
         <div class="top">
-            <i class="fa fa-search" aria-hidden="true" id='js-search-trigger'></i>
-            <img src="../src/sass/blocks/header/images/logo.png" alt="" class="logo">
-            <div class="search"><input type="text" id='js-search' value="Search"></div>  
+            <img src="../src/sass/blocks/header/images/logo.png" alt="" class="logo">                
+            <div class="search">
+                <i class="fa fa-search search__icon" aria-hidden="true" id='js-search-trigger--on'></i>
+                <!-- <div id="search__inner"> -->
+                    <input class='search__input' type="text" id='js-search' value="Search">
+                    <div class="search__button" id='js-search__button'>Go</div>
+                <!-- </div> -->
+            </div>
+            <!-- <div class="search"><input type="text" id='js-search' value="Search"></div>   -->
             <i id='js-menu-trigger' class="fa fa-bars" aria-hidden="true"></i>                
             
         </div>        
