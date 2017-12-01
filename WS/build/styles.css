@@ -81,7 +81,7 @@ header.header {
   color: #29c5e6; }
   @media (min-width: 768px) {
     .search__icon {
-      display: none; } }
+      display: none !important; } }
 
 .menu {
   display: flex;
