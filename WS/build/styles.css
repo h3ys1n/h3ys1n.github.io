@@ -183,7 +183,7 @@ section.banner {
       background-color: #8f8f8f; }
       @media (max-width: 1200px) {
         section.banner .banner-menu__item:before, section.banner #js-banner-menu__item--active:before {
-          top: 6px;
+          top: 7px;
           left: 15px; } }
     section.banner .banner-menu__item span:first-child, section.banner #js-banner-menu__item--active span:first-child {
       position: relative;
