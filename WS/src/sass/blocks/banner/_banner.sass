@@ -20,7 +20,7 @@ section.banner
         white-space: nowrap     
         margin-left: 40px     
     
-    .banner-menu  
+    .banner-menu    
         display: flex  
         height: 47px 
         box-sizing: border-box 
@@ -35,13 +35,13 @@ section.banner
             width: 300px 
             margin-right: 15px       
         
-    .banner-menu__item span, #js-banner-menu__item--active span   
+    .banner-menu__item span, .js-banner-menu__item--active span   
         font: 18px/22px 'Oswald', sans-serif  
         white-space: nowrap   
         @media screen and (max-width: $xl)
             font: 12px/15px 'Oswald', sans-serif  
             
-    .banner-menu__item, #js-banner-menu__item--active  
+    .banner-menu__item, .js-banner-menu__item--active  
         text-transform: uppercase    
         cursor: pointer 
         color: $banner-menu   
@@ -74,7 +74,7 @@ section.banner
         &:hover:before
             background-color: $hover-color 
         
-    #js-banner-menu__item--active  
+    .js-banner-menu__item--active   
         color: $hover-color  
         &:before   
             background-color: $hover-color  

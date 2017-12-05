@@ -13,6 +13,7 @@
         width: 100%      
         position: relative 
         z-index: 1 
+        box-sizing: border-box 
              
         &:first-child
             border-left: 1px solid $nav-border-color
@@ -30,13 +31,14 @@
         color: $dark-grey              
         border-top: 1px solid $nav-border-color
         border-bottom: 1px solid $nav-border-color
+        box-sizing: border-box 
                        
     .menu__item--active   
         color: #fff 
         @media screen and (max-width: 767px) 
             background-color: $hover-color 
 
-#js-activeBar
+.activeBar
     position: absolute     
     background: $hover-color
     z-index: 1 
@@ -57,10 +59,10 @@
 //     font-size: 30px !important  
 //     color: red  
 
-#js-menu-trigger     
+.fa-bars    
     height: 40px  
     // margin-top: 15px  
-    font-size: 30px !important  
+    font-size: 30px  
     color: $hover-color 
     // order: 0 
 
