@@ -18,7 +18,9 @@ section.main
             margin-right: 0 
         
         @media (max-width: $md)
-            flex: 1 1 auto 
+            flex-grow: 1    
+            flex-shrink: 1
+            flex-basis: auto      
             padding-bottom: 10px   
             margin-right: 0 
 
@@ -54,7 +56,9 @@ section.main
         display: block
         width: 136px
         height: 136px 
-        background-color: #e2e2e2
+        // background-image: url(../src/sass/blocks/main/images/main__1.jpg)
+        // background-size: cover   
+        object-fit: cover   
         border: 1px solid #ffffff
         outline: 1px solid #c9c9c9 
         margin: 0px 15px 2px 2px
