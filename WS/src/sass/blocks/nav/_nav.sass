@@ -8,7 +8,10 @@
     @media (max-width: $md)
         flex-direction: column 
         display: none 
-
+    @media (min-width: $md)
+        display: flex
+        flex-direction: row   
+        
     li
         width: 100%      
         position: relative 
@@ -35,59 +38,30 @@
                        
     .menu__item--active   
         color: #fff 
-        @media screen and (max-width: 767px) 
+        @media screen and (max-width: $md) 
             background-color: $hover-color 
+.fa-bars    
+    height: 40px  
+    font-size: 30px  
+    margin-left: 15px   
+    color: $hover-color 
+    @media screen and (min-width: $md)     
+        display: none  
 
 .activeBar
     position: absolute     
     background: $hover-color
     z-index: 1 
     box-sizing: border-box 
-    @media screen and (max-width: $sm)        
+    @media screen and (max-width: $sm)         
         display: none   
-        
 
-// .js-menu__item--active
-//     position: relative
-//     background-color: transparent        
+#js-activeBar
+    @media (max-width: $md)
+        display: none                
 
-// @media screen and (max-width: 767px)    
-//     #js-activeBar 
-//         display: none   
 
-// .fa-bars
-//     font-size: 30px !important  
-//     color: red  
-
-.fa-bars    
-    height: 40px  
-    // margin-top: 15px  
-    font-size: 30px  
-    color: $hover-color 
-    // order: 0 
-
-    // span 
-    //     font: normal 14px/40px 'Oswald', sans-serif
-    //     color: $dark-grey  
-    @media screen and (min-width: $md)     
-        display: none 
               
-// #js-adaptive-menu 
-//     display: flex
-//     @media screen and (min-width: $md)  
-//         display: none 
-
-// @media screen and (max-width: 479px)     
-//     #js-adaptive-menu
-//         display: none  
-//         .menu__item--active
-//             background-color: $hover-color  
-
-
-// @media screen and (min-width: $md)    
-//     #js-menu-trigger  
-//         display: none 
-//     #js-adaptive-menu  
-//         display: flex   !important         
+       
                         
         

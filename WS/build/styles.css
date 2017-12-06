@@ -46,6 +46,11 @@ header.header {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap; }
+    @media (max-width: 768px) {
+      header.header .top {
+        justify-content: flex-end; }
+        header.header .top .logo {
+          margin-right: auto; } }
 
 .search__input {
   width: 160px;
@@ -98,6 +103,10 @@ header.header {
     .menu {
       flex-direction: column;
       display: none; } }
+  @media (min-width: 768px) {
+    .menu {
+      display: flex;
+      flex-direction: row; } }
   .menu li {
     width: 100%;
     position: relative;
@@ -120,9 +129,18 @@ header.header {
     box-sizing: border-box; }
   .menu .menu__item--active {
     color: #fff; }
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 768px) {
       .menu .menu__item--active {
         background-color: #29c5e6; } }
+
+.fa-bars {
+  height: 40px;
+  font-size: 30px;
+  margin-left: 15px;
+  color: #29c5e6; }
+  @media screen and (min-width: 768px) {
+    .fa-bars {
+      display: none; } }
 
 .activeBar {
   position: absolute;
@@ -133,13 +151,9 @@ header.header {
     .activeBar {
       display: none; } }
 
-.fa-bars {
-  height: 40px;
-  font-size: 30px;
-  color: #29c5e6; }
-  @media screen and (min-width: 768px) {
-    .fa-bars {
-      display: none; } }
+@media (max-width: 768px) {
+  #js-activeBar {
+    display: none; } }
 
 section.banner {
   padding: 30px 140px 0;
@@ -328,7 +342,7 @@ section.main {
       background-repeat: repeat-x; }
   section.main .article__content {
     display: flex; }
-    @media (max-width: 768px) {
+    @media (max-width: 480px) {
       section.main .article__content {
         display: block; } }
   section.main .article__img {
@@ -345,8 +359,9 @@ section.main {
         float: left; } }
   section.main .article__inner {
     display: flex;
-    flex-direction: column; }
-    @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%; }
+    @media (max-width: 480px) {
       section.main .article__inner {
         display: block; } }
   section.main .article__text, section.main .article__text > i {
@@ -362,7 +377,7 @@ section.main {
       color: #c9c9c9; }
     section.main .article__read-more:visited {
       color: #000000; }
-    @media (max-width: 768px) {
+    @media (max-width: 480px) {
       section.main .article__read-more {
         display: block;
         margin-top: 15px; } }
@@ -370,7 +385,7 @@ section.main {
     margin-top: auto;
     font: 12px/16px 'Tahoma';
     color: #000000; }
-    @media (max-width: 768px) {
+    @media (max-width: 480px) {
       section.main .article__post {
         display: block;
         margin-top: 15px; } }

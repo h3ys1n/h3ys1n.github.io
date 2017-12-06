@@ -4,53 +4,10 @@ header.header
         display: flex
         justify-content: space-between 
         flex-wrap: nowrap 
+        @media (max-width: $md)
+            justify-content: flex-end
+            .logo
+                margin-right: auto   
+            
 
-        // .logo
-        //     order: 0
-
-        // .search::after 
-        //     content: 'GO' 
-        //     display: inline   
-        //     color: #ffffff
-        //     padding: 5px 12px 8px 
-        //     font: 14px/40px 'Oswald',sans-serif             
-        //     background-color: $hover-color 
-        //     cursor: pointer 
-            // @media (max-width: $md)
-            //     display: none 
-
-        // .search input
-        //     width: 160px
-        //     height: 30px
-        //     border: 1px solid $nav-border-color 
-        //     border-right: 0
-        //     font: normal 12px 'Tahoma'
-        //     color: $dark-grey   
-        //     padding-left: 8px 
-        //     // order: 1
-
-        //     @media (max-width: $md)
-        //         display: none 
-        //         position: absolute
-        //         top: 50px 
-        //         left: 14px  
-
-
-        // .fa-search
-        //     font-size: 30px
-        //     color: $hover-color 
-        //     // order: 0
-        //     @media (min-width: $md)
-        //         display: none 
-    
-
-// .logo::after 
-//     content: ''
-//     position: absolute 
-//     display: block   
-//     width: 10px
-//     height: 10px            
-//     background-color: $hover-color    
-//     order: 0
-               
 
