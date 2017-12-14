@@ -1,0 +1,80 @@
+$journal-item-width: 350px 
+
+.journal
+    +paddings(75px, 80px, 90px)  
+    font-size: 0 
+    text-align: center 
+    
+    .subtitle
+        +subtitle(30px, center, 70px)  
+    
+    .journal-item 
+        display: inline-block
+        width: $journal-item-width
+        height: $journal-item-width  
+        vertical-align: top 
+        @media only screen and (max-width: $sm)  
+            width: 95vw
+
+        .journal-pic__photo   
+            width: $journal-item-width               
+            @media only screen and (max-width: $sm)  
+                width: 95vw   
+           
+    .journal-text:nth-child(4)::before               
+        content: ""
+        display: block   
+        width: 1px 
+        height: 1px
+        border: 10px solid transparent	 
+        border-right: 10px solid #fff   
+        position: relative
+        right: 20px
+        top: 50px        
+    .journal-text:nth-child(6)::before                 
+            content: ""
+            display: block   
+            width: 1px    
+            height: 1px
+            border: 10px solid transparent	   
+            border-left: 10px solid #fff     
+            position: relative
+            left: $journal-item-width  
+            top: 50px   
+    .journal-text:nth-child(8)::before                
+        content: ""
+        display: block   
+        width: 1px 
+        height: 1px
+        border: 10px solid transparent	 
+        border-bottom: 10px solid #fff    
+        position: relative   
+        left: 50px   
+        // top: 50px
+        bottom: 20px  
+
+    .journal-item__h4
+        font: bold 0.9em/1em 'Open Sans', sans-serif 
+        color: $color-main 
+        text-transform: uppercase      
+        margin-bottom: 40px   
+
+    .journal-item__h3 
+        font: bold 1.2em/2em 'Open Sans', sans-serif 
+        color: $color-h3 
+        text-transform: uppercase  
+        margin-bottom: 20px 
+    
+    .journal-item__p
+        font: normal 1em/2 'Open Sans', sans-serif 
+        color: $gray 
+    
+    .journal-item__num   
+        font: italic 1em/11 'Times New Roman', serif     
+
+
+    .journal-pic__icon
+        position: relative
+        bottom: $journal-item-width/2+40px    
+    
+

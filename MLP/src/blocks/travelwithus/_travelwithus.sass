@@ -1,0 +1,95 @@
+.travelwithus
+    +paddings(30px, 100px, 10px)
+    // background: url(../src/blocks/travelwithus/img/bg-world_07.png) no-repeat, url(../src/blocks/travelwithus/img/twu_background.jpg) no-repeat 00px 200px 
+    // background:  url(../src/blocks/travelwithus/img/twu_background.jpg) no-repeat               
+    background: url(../src/blocks/travelwithus/img/bg_05.jpg) no-repeat 
+    // width: 100%  
+    background-position: center 
+    min-height: 1062px   
+    background-color: transparent
+    @media (max-width: $sm)
+        +paddings(30px, 0px, 10px)   
+        
+
+    
+    .subtitle 
+        +subtitle(30px, center, 70px)
+    
+    .travelwithus__container
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap 
+        z-index: 10 
+        margin-top: 120px 
+        @media only screen and (max-width: $xl)
+            margin-top: 15px  
+            justify-content: center 
+        
+
+        .info
+            width: 200px
+            height: 380px 
+            display: flex 
+            flex-direction: column
+            margin-top: 10px
+            z-index: 10 
+            @media only screen and (max-width: $md)
+                width: 160px
+                height: 300px                
+                margin-top: 10px
+                overflow: hidden
+            // @media only screen and (max-width: $sm)
+                
+            
+        
+        .info>img
+            position: absolute    
+            // width: 100%
+            z-index: -3  
+            @media only screen and (max-width: $md) 
+                width: 160px 
+
+        .info__rating
+            color: #ffffff 
+            margin: 15px 20px
+
+        .info__h3
+            font: normal 2em/1 'Open sans', sans-serif
+            color: #ffffff
+            padding: 120px 20px 5px   
+
+            
+        .info__p
+            font: normal 1.1em/1 'Open sans', sans-serif
+            color: #ffffff
+            padding: 15px 20px  
+
+        .info__price    
+            display: flex   
+            align-items: center  
+            justify-content: space-between  
+            // padding: 0 20px 
+            margin-top: auto 
+            height: 62px
+            width: 100% 
+            background-color: rgba(0,0,0,0.5) 
+
+            .info__old-price
+                padding-left: 20px 
+                text-decoration: line-through
+                font: normal 1.1em/1 'Open sans', sans-serif 
+                color: #ffffff   
+            
+            .info__new-price
+                padding-right: 20px
+                font: 2em/1 'Open Sans', sans-serif 
+                font-weight: 700  
+                font-style: normal 
+                color: #ffffff      
+                
+                 
+
+
+
+    
+ 

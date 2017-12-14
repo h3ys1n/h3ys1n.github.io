@@ -1,0 +1,81 @@
+.offer
+    +paddings(150px, 140px, 240px)
+    background-image: url(../src/blocks/offer/img/offer-bg.jpg)
+    background-position: center 
+    background-repeat: no-repeat  
+    font-size: 0 
+
+    .subtitle
+        +subtitle(28px, cener, 20px)
+    
+    .p
+        font: normal 14px/1.8 'Open Sans', sans-serif  
+        color: $gray 
+        width: 50% 
+        margin-bottom: 30px 
+        @media only screen and (max-width: $md)
+            width: 100%   
+     
+    .input-block
+        width: 80%   
+        font-size: 0 
+        // height: 60px  
+        // background-color: red   
+        display: flex    
+        align-items: center  
+        padding: 3px   
+        border-radius: 5px    
+        @media only screen and (max-width: $lg)
+            width: 100% 
+            flex-wrap: wrap 
+ 
+
+    .input-block__name, .input-block__phone
+        // display: inline-block
+        // line-height: 1.2em  
+        width: 300px  
+        height: 58px   
+        padding-left: 10px    
+        font: normal 16px 'Open Sans', sans-serif  
+        color: $gray  
+        border: 0 
+        // border-radius: 5px  
+        outline: none  
+        // border-right: 1px solid #ebebeb  
+        // @media only screen and (max-width: $lg)
+        
+    .input-block__name
+        border-radius: 5px 0 0 5px
+    .input-block__phone
+        @media only screen and (max-width: $lg)
+            border-radius: 0 5px 5px 0 
+        
+    input[type="text"]:focus   
+        border: 2px solid $color-main 
+
+    .btn
+        +btn(225px, 55px, $color-main, #fff, 'Open Sans')
+        // display: inline-block 
+        // line-height: 55px   
+        font: bold 16px 'Open Sans', sans-serif 
+        // margin-top: -27px   
+
+// @media only screen and (min-width: 768px) and (max-width: 1024px)
+//     .offer
+//         .p
+//             width: 50%
+//         .input-block
+//             display: block  
+//             height: 150px   
+//             background-color: transparent 
+//         .input-block__name, .input-block__phone 
+//             display: block
+
+// @media only screen and (min-width: 320px) and (max-width: 767px)
+//     .offer
+//         .p
+//             width: 50%
+//         .input-block
+//             display: block    
+//         .input-block__name, .input-block__phone 
+//             display: block             

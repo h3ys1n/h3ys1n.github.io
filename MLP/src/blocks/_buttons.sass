@@ -1,0 +1,29 @@
+// $btn-width: 150px
+// $btn-height: 50px
+
+=btn($btn-width, $btn-height, $btn-background-color, $btn-color) 
+    width:  $btn-width
+    height: $btn-height
+    background-color: $btn-background-color 
+    color: $btn-color    
+    border: 3px solid $color-main
+    border-radius: 3px 
+    text-transform: uppercase 
+    text-align: center 
+    font-family: 'Raleway'
+    font-weight: 900
+    font-size: 1em  
+    line-height: 4
+    letter-spacing: 0.5em  
+    flex-shrink: 0  
+    cursor: pointer 
+    &:hover
+        // outline: 6px solid $color-main   
+        border-color: darken($color-main, 15%) 
+        color: darken($btn-color, 15%)     
+        // font-size: 1.2em  
+        // line-height: 3.2
+        // font-weight: 1000 
+        
+        
+        

@@ -1,0 +1,101 @@
+@import _mixins 
+
+
+.nav__fixed 
+    position: fixed   
+    width: 100%
+    z-index: 100 
+    @media only screen and (max-width: $md)
+        position: fixed        
+        width: 30%
+        max-height: 100vh     
+        box-sizing: padding-box 
+        // left: 0   
+        // right: 0       
+        top: 0 
+        bottom: 0 
+        // float: right 
+        overflow: hidden
+
+.nav 
+    display: flex 
+    justify-content: space-between 
+    align-items: center
+    flex-wrap: wrap 
+    background-color: RGBa(255, 255, 255, 0.3)     
+    +paddings(10px, 140px, 10px)             
+    z-index: 10
+    @media only screen and (max-width: $md)  
+        height: 100vh         
+        overflow: hidden     
+        padding-top: 40px  
+        box-sizing: border-box                
+        background-color: RGBa(255, 255, 255, 0.9)
+    &:hover
+        background-color: RGBa(255, 255, 255, 0.9)
+
+    
+.nav__logo
+    font-family: 'Bringin'
+    @media only screen and (max-width: $md)
+        display: none    
+    
+    &>span:last-child
+        color: $color-nav
+        font-size: 29px  
+        
+    &>span:first-child
+        color: $color-main
+        font-size: 29px  
+        
+
+.nav ul
+    display: flex 
+    justify-content: flex-start 
+    flex-wrap: nowrap 
+    margin-right: auto 
+    overflow: hidden         
+    margin-left: 60px
+    z-index: 10
+    @media only screen and (max-width: $md)
+        margin-left: 0   
+        flex-direction: column 
+        justify-content: space-between 
+
+
+.nav__item
+    font-family: 'Open Sans'    
+    font-weight: 800
+    font-size: 1em
+    line-height: 4em
+    color: $color-nav
+    text-transform: uppercase 
+    white-space: nowrap 
+    margin-right: 20px 
+    border-bottom: 2px solid transparent  
+    &:hover
+        border-bottom: 2px solid $color-main  
+    @media only screen and (max-width: $md)
+        line-height: 2em     
+        margin-right: 5px  
+    
+.nav .btn
+    +btn(150px, 40px, transparent, $color-main, 'Raleway') 
+    letter-spacing: 0.2em  
+    z-index: 10    
+    @media only screen and (max-width: $md)
+        width: 100% 
+        white-space: nowrap  
+        overflow: hidden 
+
+#js-menu-trigger   
+    display: none
+    font-size: 40px 
+    padding: 5px 
+    color: $color-main  
+    @media only screen and (max-width: $md)
+        display: block  
+        position: fixed  
+        z-index: 110
+
+    

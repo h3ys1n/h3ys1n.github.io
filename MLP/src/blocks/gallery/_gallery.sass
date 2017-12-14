@@ -1,0 +1,21 @@
+.gallery
+    +paddings(70px, 70px, 100px)
+
+    .subtitle
+        +subtitle(30px, center, 70px)
+
+    .gallery-grid
+        display: flex
+        justify-content: center  
+        flex-wrap: wrap
+
+    .gallery-column
+        display: flex   
+        flex-direction: column   
+
+    .gallery-item
+        margin: 10px
+
+    img  
+        @media only screen and (max-width: $sm)
+            width: 95vw 

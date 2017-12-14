@@ -1,0 +1,63 @@
+.footer
+    display: flex 
+    position: relative
+    flex-direction: column  
+    +paddings(70px, 100px, 20px)
+    background-image: url(../src/blocks/footer/images/footer-bg.jpg) 
+    background-repeat: no-repeat   
+    background-position: bottom    
+    // background-attachment: fixed
+    min-height: 1200px  
+
+    .subtitle
+        +subtitle(30px, center, 70px)
+
+.review
+    display: flex
+    // flex-direction: row 
+    justify-content: space-between
+    flex-wrap: wrap 
+
+    .review-item
+        margin: 0 20px 
+        flex: 1 0 0   
+    
+        .review__comment 
+            font: normal 1.3em/2.3 'Open Sans', sans-serif 
+            color: #bcbcbc 
+        
+        .review__author 
+            display: flex
+            align-items: center 
+
+        .review__avatar
+            display: inline-block
+            border-radius: 50%
+            width: 65px
+            height: 65px 
+
+        .review__name
+            font: bold 1.1em/1 'Open Sans', sans-serif 
+            color: $color-main
+            padding-left: 10px  
+        
+        .review__post
+            font: normal 1.1em/1 'Open Sans', sans-serif 
+            color: $color-main                
+            padding-left: 5px     
+
+.bottom
+    display: flex 
+    justify-content: space-between 
+    align-items: center 
+    flex-wrap: wrap 
+    margin-top: auto 
+    
+    .bottom__copyright
+        font: normal 1.1em 'Open Sans', sans-serif  
+        color: #7cc0d4
+    
+    .bottom__number
+        font: bold 1.9em 'Roboto', sans-serif  
+        color: #7cc0d4   
+        

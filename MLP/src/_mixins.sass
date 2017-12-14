@@ -1,0 +1,72 @@
+@import _fonts  
+
+=paddings($t-pad, $h-pad, $b-pad) 
+    padding-top: $t-pad
+    padding-right: $h-pad
+    padding-bottom: $b-pad
+    padding-left: $h-pad
+    @media only screen and (max-width: 768px) 
+        padding-top: $t-pad/5
+        padding-right: $h-pad/10
+        padding-bottom: $b-pad/5
+        padding-left: $h-pad/10
+
+=btn($btn-width, $btn-height, $btn-background-color, $btn-color,$btn-font-family) 
+    width:  $btn-width
+    height: $btn-height
+    background-color: $btn-background-color 
+    color: $btn-color    
+    border: 3px solid $color-main
+    border-radius: 3px 
+    text-transform: uppercase 
+    text-align: center 
+    // font-family: 'Raleway'
+    font-family: $btn-font-family    
+    font-weight: 900    
+    font-size: 1em  
+    display: flex
+    justify-content: center
+    align-items: center 
+    flex-shrink: 0  
+    cursor: pointer 
+    &:hover   
+        border-color: darken($color-main, 15%) 
+        color: darken($btn-color, 15%)     
+
+// =p
+//     font-family: $p-font-family
+//     font-style: normal
+//     font-weight: 300
+//     font-size: 1em
+
+=subtitle($title-size,$title-position,$title-margin-bottom)
+    font-family: 'Open Sans'
+    font-weight: 900  
+    // font-weight: 400
+    font-size: $title-size
+    color: $color-h2   
+    text-transform: uppercase
+    margin-bottom: $title-margin-bottom
+    text-align: $title-position
+    
+    @media only screen and (min-width: 320px) and (max-width: 1023px)
+        margin-bottom: 10px   
+    
+    &:before
+        content: ""  
+        display: block  
+        width: 100%  
+        height: 7px 
+        margin-bottom: 40px  
+        background-image: url(../src/images/hr.png) 
+        background-repeat: no-repeat    
+        background-position: $title-position 
+
+        @media only screen and (min-width: 320px) and (max-width: 1023px)
+            margin-bottom: 10px   
+            
+            
+
+
+            
+        

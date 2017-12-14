@@ -1,0 +1,40 @@
+.signup
+    width: 500px      
+    margin: 100px auto    
+    text-align: center 
+    padding-bottom: 50px 
+    background-image: url(../src/blocks/signup/images/signup_bg.jpg) 
+    border-radius: 5px   
+    @media only screen and (max-width: $sm) 
+        width: 100%      
+        padding-bottom: 20px 
+        // height: 484px 
+ 
+    .signup__h2
+        position: relative    
+        font: bold 2.6em/2 'Open Sans', sans-serif 
+        color: $color-main 
+        text-transform: uppercase  
+
+
+    .signup__p
+        font: bold 1.1em/2 'Open Sans', sans-serif 
+        color: #383e4a         
+
+    .signup__input   
+        width: 80%
+        height: 60px
+        margin: 10px auto  
+        padding-left: 10px  
+        font: normal 16px 'Open Sans', sans-serif  
+        color: $gray  
+        border-radius: 5px 
+        border: 0 
+        outline: none  
+
+    .btn
+        +btn(80%, 70px, $color-main, #fff, 'Raleway')    
+        margin: 5px auto 
+
+   
+    
