@@ -13,6 +13,9 @@ a {
 a:visited {
   text-decoration: none; }
 
+body {
+  overflow-x: hidden; }
+
 /* raleway-regular - latin */
 @font-face {
   font-family: 'Raleway';
@@ -45,7 +48,6 @@ a:visited {
       width: 35%;
       max-height: 100vh;
       box-sizing: border-box;
-      right: 0;
       top: 0;
       bottom: 0;
       overflow: hidden;
