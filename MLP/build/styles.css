@@ -42,12 +42,15 @@ a:visited {
   @media only screen and (max-width: 768px) {
     .nav__fixed {
       position: fixed;
-      width: 30%;
+      width: 35%;
       max-height: 100vh;
-      box-sizing: padding-box;
+      box-sizing: border-box;
+      right: 0;
       top: 0;
       bottom: 0;
-      overflow: hidden; } }
+      overflow: hidden;
+      -webkit-transform: translateZ(0);
+      transform: none; } }
 
 .nav {
   display: flex;
@@ -149,6 +152,7 @@ a:visited {
 
 #js-menu-trigger {
   display: none;
+  position: fixed;
   font-size: 40px;
   padding: 5px;
   color: #36aeea; }
@@ -156,7 +160,8 @@ a:visited {
     #js-menu-trigger {
       display: block;
       position: fixed;
-      z-index: 110; } }
+      z-index: 110;
+      right: 0; } }
 
 .header {
   background-image: url(../src/blocks/header/img/header-back.jpg);
