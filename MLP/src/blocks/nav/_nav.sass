@@ -2,22 +2,26 @@
 
 
 .nav__fixed 
-    position: fixed   
-    width: 100%
+    position: fixed  
+    width: 100% 
     z-index: 100 
     @media only screen and (max-width: $md)
         position: fixed        
-        width: 30%
+        width: 35%
         max-height: 100vh     
-        box-sizing: padding-box 
+        box-sizing: border-box  
         // left: 0   
-        // right: 0       
-        top: 0 
-        bottom: 0 
+        right: 0       
+        top: 0  
+        bottom: 0  
         // float: right 
         overflow: hidden
+        // transform: translateZ(0) 
+        -webkit-transform: translateZ(0)     
+        transform: none   
 
-.nav 
+ 
+.nav   
     display: flex 
     justify-content: space-between 
     align-items: center
@@ -89,7 +93,8 @@
         overflow: hidden 
 
 #js-menu-trigger   
-    display: none
+    display: none 
+    position: fixed       
     font-size: 40px 
     padding: 5px 
     color: $color-main  
@@ -97,5 +102,6 @@
         display: block  
         position: fixed  
         z-index: 110
+        right: 0  
 
     
