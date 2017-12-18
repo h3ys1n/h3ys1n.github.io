@@ -41,6 +41,7 @@ a:visited {
   z-index: 100; }
   @media only screen and (max-width: 768px) {
     .nav__fixed {
+      display: none;
       position: fixed;
       width: 35%;
       max-height: 100vh;
@@ -831,9 +832,21 @@ a:visited {
     color: #fff; }
     .lightbox .overlay__arrow:hover {
       color: #36aeea; }
-  .lightbox img {
+  .lightbox .overlay__img {
     margin: auto;
     z-index: 1; }
+  .lightbox .overlay__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.3);
+    text-align: center; }
+    .lightbox .overlay__close .fa-times-circle {
+      font-size: 30px;
+      line-height: 35px; }
 
 .logos {
   padding-top: 70px;
