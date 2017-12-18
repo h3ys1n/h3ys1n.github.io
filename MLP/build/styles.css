@@ -13,9 +13,6 @@ a {
 a:visited {
   text-decoration: none; }
 
-body {
-  overflow-x: hidden; }
-
 /* raleway-regular - latin */
 @font-face {
   font-family: 'Raleway';
@@ -48,11 +45,10 @@ body {
       width: 35%;
       max-height: 100vh;
       box-sizing: border-box;
+      right: 0;
       top: 0;
       bottom: 0;
-      overflow: hidden;
-      -webkit-transform: translateZ(0);
-      transform: none; } }
+      overflow: hidden; } }
 
 .nav {
   display: flex;
@@ -762,7 +758,8 @@ body {
   padding-top: 70px;
   padding-right: 70px;
   padding-bottom: 100px;
-  padding-left: 70px; }
+  padding-left: 70px;
+  user-select: none; }
   @media only screen and (max-width: 768px) {
     .gallery {
       padding-top: 14px;
@@ -800,10 +797,43 @@ body {
     display: flex;
     flex-direction: column; }
   .gallery .gallery-item {
-    margin: 10px; }
+    margin: 10px;
+    flex: none; }
   @media only screen and (max-width: 480px) {
     .gallery img {
       width: 95vw; } }
+
+.lightbox {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 200; }
+  .lightbox .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); }
+  .lightbox figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; }
+  .lightbox .overlay__arrow {
+    cursor: pointer;
+    padding: 100px;
+    z-index: 2;
+    font: 40px/30px  sans-serif;
+    color: #fff; }
+    .lightbox .overlay__arrow:hover {
+      color: #36aeea; }
+  .lightbox img {
+    margin: auto;
+    z-index: 1; }
 
 .logos {
   padding-top: 70px;
