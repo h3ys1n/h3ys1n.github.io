@@ -1,4 +1,5 @@
 $(function(){
+    const nav = $('.nav')
     const menuItem =$('.menu__item')
     const activeItem = $('.menu__item--active')
     const activeBar = $('#js-activeBar')
@@ -22,6 +23,21 @@ $(function(){
             left: itemLeft+'px',
             height: itemHeight + 'px'                                        
         })           
+    }
+
+
+    window.onresize=function(){
+        itemWidth = menuItem.outerWidth();
+        itemLeft = activeItem.parent().position().left;
+        
+        if(activeItem.length>0){   
+            activeBar.css({
+            opacity: 1,
+            width: itemWidth + 'px',
+            left: itemLeft+'px',
+            height: itemHeight + 'px'                                       
+        })           
+    }
     }
 
     menuItem.mouseover(function(){

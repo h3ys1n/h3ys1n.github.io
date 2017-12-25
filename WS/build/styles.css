@@ -183,9 +183,11 @@ section.banner {
     box-sizing: border-box;
     padding: 6px 8px 15px;
     background-color: #f3f3f3;
-    overflow-x: auto; }
+    overflow-x: auto;
+    overflow-y: hidden; }
   section.banner .banner-menu li {
     width: calc(100%/4);
+    height: 32px;
     white-space: nowrap; }
     @media (max-width: 768px) {
       section.banner .banner-menu li {

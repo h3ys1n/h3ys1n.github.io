@@ -1,9 +1,9 @@
 @import _mixins 
 
-
 .nav__fixed 
     position: fixed  
-    width: 100% 
+    max-width: 1440px  
+    width: 100%
     z-index: 100 
     @media only screen and (max-width: $md)
         display: none 
@@ -20,10 +20,14 @@
     display: flex 
     justify-content: space-between 
     align-items: center
-    flex-wrap: wrap 
+    flex-wrap: wrap  
     background-color: RGBa(255, 255, 255, 0.3)           
     +paddings(10px, 140px, 10px)             
     z-index: 10
+    @media only screen and (max-width: $xl)  
+        flex-wrap: no-wrap  
+        +paddings(10px, 10px, 10px)                      
+    
     @media only screen and (max-width: $md)  
         height: 100vh         
         overflow: hidden     
@@ -36,17 +40,21 @@
     
 .nav__logo
     font-family: 'Bringin'
+    white-space: nowrap 
     @media only screen and (max-width: $md)
         display: none    
     
     &>span:last-child
         color: $color-nav
         font-size: 29px  
+        @media only screen and (min-width: $md) and (max-width: $lg)
+            font-size: 20px    
         
     &>span:first-child
         color: $color-main
         font-size: 29px  
-        
+        @media only screen and (min-width: $md) and (max-width: $lg)
+            font-size: 20px          
 
 .nav ul
     display: flex 
@@ -77,6 +85,9 @@
     @media only screen and (max-width: $md)
         line-height: 2em     
         margin-right: 5px  
+    @media only screen and (min-width: $md) and (max-width: $lg)
+        margin-right: 10px   
+        
     
 .nav .btn
     +btn(150px, 40px, transparent, $color-main, 'Raleway') 
@@ -86,17 +97,22 @@
         width: 100% 
         white-space: nowrap  
         overflow: hidden 
+    @media only screen and (min-width: $md) and (max-width: $lg)
+        width: 90px    
 
-#js-menu-trigger   
+#js-menu-on,  #js-menu-off   
     display: none 
     position: fixed       
     font-size: 40px 
     padding: 5px 
     color: $color-main   
-    @media only screen and (max-width: $md)
+    @media only screen and (max-width: $md)   
         display: block  
         position: fixed  
         z-index: 110
         right: 0  
 
+#js-menu-off
+    @media only screen and (max-width: $md)
+        display: none  
     

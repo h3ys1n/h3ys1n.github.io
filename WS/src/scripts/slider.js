@@ -1,3 +1,5 @@
+//          ver for id
+
 // var containerWidth = document.querySelector('#js-slider_03').offsetWidth 
 // var ul = document.querySelector('#js-slider_03 ul')
 // var li = document.querySelectorAll('.slider__li');
@@ -54,6 +56,7 @@
 
 // }
 
+//          ver for class
 var containerWidth = document.querySelector('#js-slider_03').offsetWidth 
 var ul = document.querySelector('#js-slider_03 ul')
 var li = document.querySelectorAll('.slider__li');
@@ -66,10 +69,22 @@ var position = 0
 
 var activeDot = document.querySelector('.js-banner-menu__item--active')    
 
+// window.onload = function(){
+//     window.onresize = function(){
+//         console.log('resize slder') 
+//         containerWidth = document.querySelector('#js-slider_03').offsetWidth
+//         for(var i=0; i< li.length; i++){
+//             li[i].style.width = containerWidth + 'px';
+//             ul.style.width = li[0].style.width * li.length + 'px'
+//         }
+//     }
+// }
+
 for(var i=0; i< li.length; i++){
     li[i].style.width = containerWidth + 'px';
     ul.style.width = li[0].style.width * li.length + 'px'
 }
+
 
 dots.onclick = function(event) {
     var target = event.target;
@@ -85,8 +100,7 @@ dots.onclick = function(event) {
     }
     target.classList.add('js-banner-menu__item--active')
     position = -containerWidth*slidersNumber    
-    li[0].style.marginLeft = position + 'px'    
-     console.log(position)   
+    li[0].style.marginLeft = position + 'px'      
 }
 
 

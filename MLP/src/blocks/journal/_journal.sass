@@ -21,37 +21,30 @@ $journal-item-width: 350px
             @media only screen and (max-width: $sm)  
                 width: 95vw   
            
-    .journal-text:nth-child(4)::before               
+    .journal-text::before                                                  
         content: ""
         display: block   
         width: 1px 
         height: 1px
-        border: 10px solid transparent	 
+        border: 10px solid transparent	   
         border-right: 10px solid #fff   
-        position: relative
+        position: relative   
+        @media only screen and (max-width: $xl)
+            display: none 
+    .journal-text:nth-child(4)::before 
         right: 20px
-        top: 50px        
-    .journal-text:nth-child(6)::before                 
-            content: ""
-            display: block   
-            width: 1px    
-            height: 1px
-            border: 10px solid transparent	   
-            border-left: 10px solid #fff     
-            position: relative
+        top: 50px                
+    .journal-text:nth-child(6)::before    
+            border: 10px solid transparent	                        
+            border-left: 10px solid #fff                         
             left: $journal-item-width  
             top: 50px   
     .journal-text:nth-child(8)::before                
-        content: ""
-        display: block   
-        width: 1px 
-        height: 1px
         border: 10px solid transparent	 
-        border-bottom: 10px solid #fff    
-        position: relative   
-        left: 50px   
-        // top: 50px
-        bottom: 20px  
+        border-bottom: 10px solid #fff       
+        left: 50px    
+        bottom: 20px                                         
+
 
     .journal-item__h4
         font: bold 0.9em/1em 'Open Sans', sans-serif 

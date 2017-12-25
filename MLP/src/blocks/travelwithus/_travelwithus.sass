@@ -19,7 +19,7 @@
         display: flex
         justify-content: space-between
         flex-wrap: wrap 
-        z-index: 10 
+        // z-index: 10 
         margin-top: 120px 
         @media only screen and (max-width: $xl)
             margin-top: 15px  
@@ -31,8 +31,9 @@
             height: 380px 
             display: flex 
             flex-direction: column
+            position: relative 
             margin-top: 10px
-            z-index: 10 
+            z-index: 2 
             @media only screen and (max-width: $md)
                 width: 160px
                 height: 300px                
@@ -45,11 +46,12 @@
         .info>img
             position: absolute    
             // width: 100%
-            z-index: -3  
+            z-index: -1    
             @media only screen and (max-width: $md) 
                 width: 160px 
 
         .info__rating
+            // position: relative
             color: #ffffff 
             margin: 15px 20px
 

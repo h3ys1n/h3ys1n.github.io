@@ -13,6 +13,12 @@ a {
 a:visited {
   text-decoration: none; }
 
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  background: #ffffff; }
+
 /* raleway-regular - latin */
 @font-face {
   font-family: 'Raleway';
@@ -37,6 +43,7 @@ a:visited {
 /* open-sans-800italic - latin */
 .nav__fixed {
   position: fixed;
+  max-width: 1440px;
   width: 100%;
   z-index: 100; }
   @media only screen and (max-width: 768px) {
@@ -68,6 +75,19 @@ a:visited {
       padding-right: 14px;
       padding-bottom: 2px;
       padding-left: 14px; } }
+  @media only screen and (max-width: 1200px) {
+    .nav {
+      flex-wrap: no-wrap;
+      padding-top: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      padding-left: 10px; } }
+  @media only screen and (max-width: 1200px) and (max-width: 768px) {
+    .nav {
+      padding-top: 2px;
+      padding-right: 1px;
+      padding-bottom: 2px;
+      padding-left: 1px; } }
   @media only screen and (max-width: 768px) {
     .nav {
       height: 100vh;
@@ -79,16 +99,23 @@ a:visited {
     background-color: RGBa(255, 255, 255, 0.9); }
 
 .nav__logo {
-  font-family: 'Bringin'; }
+  font-family: 'Bringin';
+  white-space: nowrap; }
   @media only screen and (max-width: 768px) {
     .nav__logo {
       display: none; } }
   .nav__logo > span:last-child {
     color: #9daeb6;
     font-size: 29px; }
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+      .nav__logo > span:last-child {
+        font-size: 20px; } }
   .nav__logo > span:first-child {
     color: #36aeea;
     font-size: 29px; }
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+      .nav__logo > span:first-child {
+        font-size: 20px; } }
 
 .nav ul {
   display: flex;
@@ -120,6 +147,9 @@ a:visited {
     .nav__item {
       line-height: 2em;
       margin-right: 5px; } }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .nav__item {
+      margin-right: 10px; } }
 
 .nav .btn {
   width: 150px;
@@ -148,19 +178,26 @@ a:visited {
       width: 100%;
       white-space: nowrap;
       overflow: hidden; } }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .nav .btn {
+      width: 90px; } }
 
-#js-menu-trigger {
+#js-menu-on, #js-menu-off {
   display: none;
   position: fixed;
   font-size: 40px;
   padding: 5px;
   color: #36aeea; }
   @media only screen and (max-width: 768px) {
-    #js-menu-trigger {
+    #js-menu-on, #js-menu-off {
       display: block;
       position: fixed;
       z-index: 110;
       right: 0; } }
+
+@media only screen and (max-width: 768px) {
+  #js-menu-off {
+    display: none; } }
 
 .header {
   background-image: url(../src/blocks/header/img/header-back.jpg);
@@ -181,6 +218,18 @@ a:visited {
   @media only screen and (max-width: 480px) {
     .header {
       background-position: 60% 100%; } }
+  @media only screen and (min-width: 1390px) {
+    .header {
+      padding-top: 0px;
+      padding-right: 170px;
+      padding-bottom: 0px;
+      padding-left: 170px; } }
+  @media only screen and (min-width: 1390px) and (max-width: 768px) {
+    .header {
+      padding-top: 0px;
+      padding-right: 17px;
+      padding-bottom: 0px;
+      padding-left: 17px; } }
   .header .header__h1 {
     margin-top: 260px; }
     .header .header__h1 span:first-child {
@@ -361,34 +410,28 @@ a:visited {
       @media only screen and (max-width: 480px) {
         .journal .journal-item .journal-pic__photo {
           width: 95vw; } }
-  .journal .journal-text:nth-child(4)::before {
+  .journal .journal-text::before {
     content: "";
     display: block;
     width: 1px;
     height: 1px;
     border: 10px solid transparent;
     border-right: 10px solid #fff;
-    position: relative;
+    position: relative; }
+    @media only screen and (max-width: 1200px) {
+      .journal .journal-text::before {
+        display: none; } }
+  .journal .journal-text:nth-child(4)::before {
     right: 20px;
     top: 50px; }
   .journal .journal-text:nth-child(6)::before {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 1px;
     border: 10px solid transparent;
     border-left: 10px solid #fff;
-    position: relative;
     left: 350px;
     top: 50px; }
   .journal .journal-text:nth-child(8)::before {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 1px;
     border: 10px solid transparent;
     border-bottom: 10px solid #fff;
-    position: relative;
     left: 50px;
     bottom: 20px; }
   .journal .journal-item__h4 {
@@ -699,7 +742,6 @@ a:visited {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    z-index: 10;
     margin-top: 120px; }
     @media only screen and (max-width: 1200px) {
       .travelwithus .travelwithus__container {
@@ -710,8 +752,9 @@ a:visited {
       height: 380px;
       display: flex;
       flex-direction: column;
+      position: relative;
       margin-top: 10px;
-      z-index: 10; }
+      z-index: 2; }
       @media only screen and (max-width: 768px) {
         .travelwithus .travelwithus__container .info {
           width: 160px;
@@ -720,7 +763,7 @@ a:visited {
           overflow: hidden; } }
     .travelwithus .travelwithus__container .info > img {
       position: absolute;
-      z-index: -3; }
+      z-index: -1; }
       @media only screen and (max-width: 768px) {
         .travelwithus .travelwithus__container .info > img {
           width: 160px; } }
@@ -794,24 +837,41 @@ a:visited {
     display: flex;
     justify-content: center;
     flex-wrap: wrap; }
+    @media only screen and (max-width: 992px) {
+      .gallery .gallery-grid {
+        display: none; } }
   .gallery .gallery-column {
     display: flex;
     flex-direction: column; }
-  .gallery .gallery-item {
+  .gallery .gallery-box {
+    position: relative;
     margin: 10px;
-    flex: none; }
-  @media only screen and (max-width: 480px) {
-    .gallery img {
-      width: 95vw; } }
+    flex: none;
+    cursor: pointer; }
+    .gallery .gallery-box:hover .fa-search-plus {
+      display: inline-block; }
+    .gallery .gallery-box .fa-search-plus {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 50px;
+      margin-top: -25px;
+      margin-left: -25px;
+      color: #36aeea;
+      pointer-events: none; }
 
 .lightbox {
   display: none;
   position: absolute;
   left: 0;
   width: 100%;
-  height: 100%;
   text-align: center;
   z-index: 200; }
+  @media only screen and (max-width: 992px) {
+    .lightbox {
+      display: block;
+      position: static; } }
   .lightbox .overlay {
     position: fixed;
     top: 0;
@@ -819,12 +879,23 @@ a:visited {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7); }
-  .lightbox figure {
+    @media only screen and (max-width: 992px) {
+      .lightbox .overlay {
+        position: static; } }
+  .lightbox .figure {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 100%; }
+    height: 100%;
+    max-width: 100%; }
+    @media only screen and (max-width: 992px) {
+      .lightbox .figure {
+        height: 385px;
+        position: relative;
+        text-align: center;
+        height: 345px; } }
   .lightbox .overlay__arrow {
+    position: static;
     cursor: pointer;
     padding: 100px;
     z-index: 2;
@@ -832,9 +903,18 @@ a:visited {
     color: #fff; }
     .lightbox .overlay__arrow:hover {
       color: #36aeea; }
-  .lightbox .overlay__img {
-    margin: auto;
-    z-index: 1; }
+    @media only screen and (max-width: 992px) {
+      .lightbox .overlay__arrow {
+        position: absolute;
+        top: 50%;
+        margin-top: -17px;
+        padding: 0; } }
+  .lightbox .next {
+    right: 0; }
+  @media only screen and (max-width: 992px) {
+    .lightbox .overlay__img {
+      max-width: 100%;
+      margin: auto; } }
   .lightbox .overlay__close {
     position: absolute;
     top: 0;
@@ -844,6 +924,9 @@ a:visited {
     height: 35px;
     background: rgba(255, 255, 255, 0.3);
     text-align: center; }
+    @media only screen and (max-width: 992px) {
+      .lightbox .overlay__close {
+        display: none; } }
     .lightbox .overlay__close .fa-times-circle {
       font-size: 30px;
       line-height: 35px; }
@@ -913,7 +996,10 @@ a:visited {
   flex-wrap: wrap; }
   .review .review-item {
     margin: 0 20px;
-    flex: 1 0 0; }
+    flex: 1 0 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0; }
     .review .review-item .review__comment {
       font: normal 1.3em/2.3 'Open Sans', sans-serif;
       color: #bcbcbc; }
