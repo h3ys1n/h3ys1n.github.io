@@ -56,7 +56,7 @@
 
 // }
 
-//          ver for class
+//          ver for classes
 var containerWidth = document.querySelector('#js-slider_03').offsetWidth 
 var ul = document.querySelector('#js-slider_03 ul')
 var li = document.querySelectorAll('.slider__li');
