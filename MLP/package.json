@@ -1,7 +1,7 @@
 {
-  "name": "Whitesquare",
+  "name": "Mountain Landing Page",
   "version": "1.0.0",
-  "description": "Whitesquare",
+  "description": "MLP",
   "main": "index.js",
   "dependencies": {
     "gulp": "^3.9.1",
