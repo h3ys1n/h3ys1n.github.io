@@ -1,7 +1,7 @@
 {
-  "name": "imgs_test",
+  "name": "Whitesquare",
   "version": "1.0.0",
-  "description": "img optimization",
+  "description": "Whitesquare",
   "main": "index.js",
   "dependencies": {
     "gulp": "^3.9.1",
@@ -15,6 +15,7 @@
     "gulp-clean-css": "^3.9.0",
     "gulp-imagemin": "^4.0.0",
     "gulp-uglify": "^3.0.0",
+    "pump": "^2.0.0",
     "rename": "^1.0.4"
   },
   "scripts": {
