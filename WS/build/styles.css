@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -14,10 +15,11 @@ a:visited {
   text-decoration: none; }
 
 body {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   background-image: url(../src/img/background.png);
-  background-repeat: repeat; }
+  background-repeat: repeat;
+  overflow-x: hidden; }
 
 /* oswald-200 - latin */
 @font-face {
@@ -50,9 +52,11 @@ header.header {
     flex-wrap: nowrap; }
     @media (max-width: 768px) {
       header.header .top {
-        justify-content: flex-end; }
+        justify-content: space-between; }
         header.header .top .logo {
-          margin-right: auto; } }
+          order: 1; }
+        header.header .top .fa-bars {
+          order: 2; } }
 
 .search__input {
   width: 160px;
@@ -187,9 +191,12 @@ section.banner {
     background-color: #f3f3f3;
     overflow-x: auto;
     overflow-y: hidden; }
+    @media (max-width: 768px) {
+      section.banner .banner-menu {
+        display: none; } }
   section.banner .banner-menu li {
     width: calc(100%/4);
-    height: 32px;
+    height: 32pxы;
     white-space: nowrap; }
     @media (max-width: 768px) {
       section.banner .banner-menu li {
@@ -260,13 +267,20 @@ section.banner {
   text-align: center;
   cursor: pointer;
   user-select: none; }
+  @media (max-width: 768px) {
+    .slider__arrow {
+      height: 50px;
+      width: 50px;
+      bottom: 10px; } }
+  .slider__arrow:first-child {
+    display: none; }
   .slider__arrow span {
     font-size: 40px;
     line-height: 280px;
     color: #fff; }
     @media (max-width: 768px) {
       .slider__arrow span {
-        line-height: 450px; } }
+        line-height: 0; } }
 
 #slider-right {
   right: 0; }
@@ -473,4 +487,5 @@ section.main {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-left: auto; }
+    margin-left: auto;
+    margin-top: 15px; }

@@ -21,14 +21,21 @@
     z-index: 2   
     text-align: center  
     cursor: pointer 
-    user-select: none   
-    
+    user-select: none  
+    @media (max-width: $md) 
+        height: 50px 
+        width: 50px
+        bottom: 10px   
+    &:first-child
+        display: none   
+
+          
     span
         font-size: 40px
         line-height: 280px   
         color: #fff    
         @media (max-width: $md) 
-            line-height: 450px    
+            line-height: 0   
  
 
 #slider-right

@@ -1,11 +1,11 @@
 $(function(){
-    const nav = $('.nav')
-    const menuItem =$('.menu__item')
-    const activeItem = $('.menu__item--active')
-    const activeBar = $('#js-activeBar')
-    var itemWidth = menuItem.outerWidth();
-    var itemHeight = menuItem.outerHeight();
-    var itemLeft = activeItem.parent().position().left;
+    var nav = $('.nav'),
+        menuItem =$('.menu__item'),
+        activeItem = $('.menu__item--active'),
+        activeBar = $('#js-activeBar'),
+        itemWidth = menuItem.outerWidth(),
+        itemHeight = menuItem.outerHeight(),
+        itemLeft = activeItem.parent().position().left;
 
     var itemColor = $('.menu__item').css("color")
     var itemBackgroundColor = $('.menu__item').css("backgroundColor")

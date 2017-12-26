@@ -28,10 +28,12 @@ section.banner
         background-color: $grey  
         overflow-x: auto   
         overflow-y: hidden  
+        @media (max-width: $md) 
+            display: none         
               
     .banner-menu li      
         width: calc(100%/4)   
-        height: 32px 
+        height: 32pxы 
         white-space: nowrap             
         @media (max-width: $md) 
             width: 300px 
