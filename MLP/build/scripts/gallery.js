@@ -14,7 +14,7 @@ img.on("click", function(){
     
     //AJAX
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', '../src/scripts/gallery.json', false);
+    xhr.open('GET', 'scripts/gallery.json', false);
     xhr.send();
     galleryAJAX = JSON.parse(xhr.responseText);
 
