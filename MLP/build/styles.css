@@ -41,6 +41,30 @@ body {
 
 /* open-sans-regular - latin */
 /* open-sans-800italic - latin */
+.anim {
+  animation: titleLeftMove forwards ease-in-out;
+  animation-name: titleLeftMove;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1; }
+
+@keyframes titleLeftMove {
+  from {
+    transform: translateX(160px); }
+  to {
+    transform: translateX(0px); } }
+
+.anim {
+  animation: titleLeftMove forwards ease-in-out;
+  animation-name: titleLeftMove;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1; }
+
+@keyframes titleLeftMove {
+  from {
+    transform: translateX(160px); }
+  to {
+    transform: translateX(0px); } }
+
 .nav__fixed {
   position: fixed;
   max-width: 1440px;
@@ -911,10 +935,12 @@ body {
         padding: 0; } }
   .lightbox .next {
     right: 0; }
-  @media only screen and (max-width: 992px) {
-    .lightbox .overlay__img {
-      max-width: 100%;
-      margin: auto; } }
+  .lightbox .overlay__img {
+    min-width: 0; }
+    @media only screen and (max-width: 992px) {
+      .lightbox .overlay__img {
+        max-width: 100%;
+        margin: auto; } }
   .lightbox .overlay__close {
     position: absolute;
     top: 0;

@@ -14,13 +14,13 @@ var cache = require('gulp-cache');
 
 
 gulp.task('sass', function(){
-  gulp.src('sass/**/*.sass')
+  gulp.src('src/**/*.sass')
       .pipe(sass().on('error', sass.logError))
-      .pipe(gulp.dest('../build'))  
+      .pipe(gulp.dest('build'))  
 });
 
 gulp.task('sass:watch', function(){
-  gulp.watch('sass/**/*.sass', ['sass']);
+  gulp.watch('src/**/*.sass', ['sass']);
 });
 
 gulp.task('autoprefixer', () =>
