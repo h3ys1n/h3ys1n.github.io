@@ -22,9 +22,10 @@
         margin: 10px
         flex: none
         cursor: pointer 
+        overflow: hidden
         &:hover .fa-search-plus
             display: inline-block      
-        
+            z-index: 10
         .fa-search-plus
             display: none  
             position: absolute  
@@ -35,7 +36,11 @@
             margin-left: -25px 
             color: $color-main   
             pointer-events: none    
-
+        img 
+            transition: all 1s ease-out 
+        img:hover
+            transform: scale(1.2)
+        
 
 .lightbox
     display: none 
