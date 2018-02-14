@@ -1,0 +1,25 @@
+.scheme-block
+    +paddings(70px, 0, 70px) 
+    text-align: center 
+    
+    .subtitle
+        +subtitle(30px, center, 70px)  
+    
+    svg
+        margin: 0 auto    
+    
+    .scheme-desk
+        display: none
+        @media only screen and (min-width: $xl)
+            display: block 
+
+    .scheme-pad
+        display: none
+        @media only screen and (max-width: $xl) and (min-width: $md)
+            display: block 
+
+    .scheme-mob
+        display: none
+        @media only screen and (max-width: $md) 
+            display: block     
+     
