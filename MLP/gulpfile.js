@@ -43,7 +43,7 @@ gulp.task('minify-css', () => {
     .pipe(gulp.dest('build'))
 });
 
-gulp.task('js-compress', function (cb) {
+gulp.task('js-compress', function (cb) {      //only ES5
   pump([
         gulp.src('src/scripts/*.js'),
         rename({ suffix: '.min' }),
@@ -53,6 +53,7 @@ gulp.task('js-compress', function (cb) {
     cb
   );
 });
+
 
 gulp.task('imagemin', function() {
     gulp.src('../S/h3ys1n.github.io/MLP/src/**/*')

@@ -8,7 +8,6 @@
     @media only screen and (max-width: $sm) 
         width: 100%      
         padding-bottom: 20px 
-        // height: 484px 
  
     .signup__h2
         position: relative    
@@ -31,6 +30,8 @@
         border-radius: 5px 
         border: 0 
         outline: none  
+        &:focus    
+            box-shadow: inset 0px -6px 0 -1px  rgba(54, 174, 234, 1) 
 
     .btn
         +btn(80%, 70px, $color-main, #fff, 'Raleway')    

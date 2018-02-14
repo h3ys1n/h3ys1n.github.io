@@ -5,6 +5,9 @@
     max-width: 1440px  
     width: 100%
     z-index: 100 
+    max-height: 80px 
+    box-sizing: border-box    
+    
     @media only screen and (max-width: $md)
         display: none 
         position: fixed        
@@ -24,6 +27,8 @@
     background-color: RGBa(255, 255, 255, 0.3)           
     +paddings(10px, 140px, 10px)             
     z-index: 10
+    height: 80px 
+    box-sizing: border-box 
     @media only screen and (max-width: $xl)  
         flex-wrap: no-wrap  
         +paddings(10px, 10px, 10px)                      
@@ -84,7 +89,7 @@
         border-bottom: 2px solid $color-main  
     @media only screen and (max-width: $md)
         line-height: 2em     
-        margin-right: 5px  
+        padding-left: 5px    
     @media only screen and (min-width: $md) and (max-width: $lg)
         margin-right: 10px   
         
@@ -93,12 +98,13 @@
     +btn(150px, 40px, transparent, $color-main, 'Raleway') 
     letter-spacing: 0.2em  
     z-index: 10    
+    box-sizing: border-box 
     @media only screen and (max-width: $md)
         width: 100% 
         white-space: nowrap  
         overflow: hidden 
     @media only screen and (min-width: $md) and (max-width: $lg)
-        width: 90px    
+        width: 90px     
 
 #js-menu-on,  #js-menu-off   
     display: none 

@@ -6,7 +6,6 @@
     background-image: url(../src/blocks/footer/images/footer-bg.jpg) 
     background-repeat: no-repeat   
     background-position: bottom    
-    // background-attachment: fixed
     min-height: 1200px  
 
     .subtitle
@@ -14,7 +13,6 @@
 
 .review
     display: flex
-    // flex-direction: row 
     justify-content: space-between
     flex-wrap: wrap 
 
@@ -28,7 +26,8 @@
         .review__comment 
             font: normal 1.3em/2.3 'Open Sans', sans-serif 
             color: #bcbcbc 
-        
+            @media only screen and (max-width: $sm) 
+                margin-top: 20px 
         .review__author 
             display: flex
             align-items: center 
