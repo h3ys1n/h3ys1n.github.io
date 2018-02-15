@@ -45,7 +45,7 @@ function nextImg(){
     else imgsIndex = 0
     imgsSrc = img.eq(imgsIndex).attr('src')
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', '../src/scripts/gallery.json', false);
+    xhr.open('GET', 'scripts/gallery.json', false);
     xhr.send();
     galleryAJAX = JSON.parse(xhr.responseText);
 
@@ -59,7 +59,7 @@ function prevImg(){
     else imgsIndex = img.length-1
     imgsSrc = img.eq(imgsIndex).attr('src')
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', '../src/scripts/gallery.json', false);
+    xhr.open('GET', 'scripts/gallery.json', false);
     xhr.send();
     galleryAJAX = JSON.parse(xhr.responseText);
 
