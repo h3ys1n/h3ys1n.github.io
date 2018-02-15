@@ -49,7 +49,7 @@ function nextImg(){
     xhr.send();
     galleryAJAX = JSON.parse(xhr.responseText);
 
-    lightbox.find("img").attr('src', galleryAJAX[imgsIndex+1])
+    lightbox.find("img").attr('src', galleryAJAX[imgsIndex])
 }
 
 function prevImg(){
