@@ -1,3 +1,4 @@
+
 var img = $(".gallery-box img"),
     lightbox = $(".lightbox"),
     overlay = $(".overlay"),
@@ -6,7 +7,8 @@ var img = $(".gallery-box img"),
     overlayImg = $(".overlay__img"),
     imgsSrc,
     imgsIndex,
-    galleryAJAX
+    galleryAJAX;
+
 
 img.on("click", function(){
     imgsIndex =  img.index( this )    
@@ -33,6 +35,7 @@ overlay.on("click", function(){
         $(this).fadeOut()
         lightbox.fadeOut()
     }  
+    else nextImg()
 })
 
 function nextImg(){
@@ -41,10 +44,12 @@ function nextImg(){
     }
     else imgsIndex = 0
     imgsSrc = img.eq(imgsIndex).attr('src')
-    //AJAX
-    lightbox.find("img").attr('src', galleryAJAX[imgsIndex])
-    // NO AJAX
-    // lightbox.find("img").attr('src', imgsSrc)
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '../src/scripts/gallery.json', false);
+    xhr.send();
+    galleryAJAX = JSON.parse(xhr.responseText);
+
+    lightbox.find("img").attr('src', galleryAJAX[imgsIndex+1])
 }
 
 function prevImg(){
@@ -53,9 +58,12 @@ function prevImg(){
     }
     else imgsIndex = img.length-1
     imgsSrc = img.eq(imgsIndex).attr('src')
-    lightbox.find("img").attr('src', galleryAJAX[imgsIndex])
-    
-    // lightbox.find("img").attr('src', imgsSrc)   
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '../src/scripts/gallery.json', false);
+    xhr.send();
+    galleryAJAX = JSON.parse(xhr.responseText);
+
+    lightbox.find("img").attr('src', galleryAJAX[imgsIndex]) 
 }
 overlayImg.on('click', function(e){
     e.stopPropagation()
